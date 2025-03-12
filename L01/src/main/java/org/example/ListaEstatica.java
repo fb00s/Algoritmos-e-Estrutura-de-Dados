@@ -43,7 +43,7 @@ public class ListaEstatica {
     public void retirar(int num){
         for(int i = 0; i < tamanho; i++){
             if(info[i] == num){
-                for (int j = i; j < tamanho; j++){
+                for (int j = i; j < tamanho - 1; j++){
                     info[j] = info[j + 1];
                 }
                 tamanho--;
