@@ -20,9 +20,7 @@ public class ListaEstatica {
     }
 
     public void inserir(int num){
-        if (tamanho == info.length){
-            redimensionar();
-        }
+        if (tamanho == info.length) redimensionar();
 
         info[tamanho] = num;
         tamanho++;
