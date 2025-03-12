@@ -19,10 +19,10 @@ public class ListaEstatica {
         info = novaLista;
     }
 
-    public void inserir(int num){
+    public void inserir(int valor){
         if (tamanho == info.length) redimensionar();
 
-        info[tamanho] = num;
+        info[tamanho] = valor;
         tamanho++;
     }
 
@@ -32,17 +32,17 @@ public class ListaEstatica {
         }
     }
 
-    public int buscar(int num){
+    public int buscar(int valor){
         for(int i = 0; i < tamanho; i++){
-            if(info[i] == num) return i;
+            if(info[i] == valor) return i;
         }
 
         return -1;
     }
 
-    public void retirar(int num){
+    public void retirar(int valor){
         for(int i = 0; i < tamanho; i++){
-            if(info[i] == num){
+            if(info[i] == valor){
                 for (int j = i; j < tamanho - 1; j++){
                     info[j] = info[j + 1];
                 }
@@ -57,12 +57,12 @@ public class ListaEstatica {
         tamanho = 0;
     }
 
-    public int obterElemento(int indice) throws IndexOutOfBoundsException{
-        if (indice > tamanho - 1){
+    public int obterElemento(int posicao) throws IndexOutOfBoundsException{
+        if (posicao > tamanho - 1){
             throw new IndexOutOfBoundsException();
         }
 
-        return info[indice];
+        return info[posicao];
     }
 
     public boolean estaVazia(){
